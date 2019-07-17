@@ -51,11 +51,11 @@ https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints
 
 
 # Prometheus
-
+https://github.com/helm/charts/tree/master/stable/prometheus
 
 
 # Grafana
-
+https://github.com/helm/charts/tree/master/stable/grafana
 
 
 # Cheat sheet
@@ -79,7 +79,7 @@ helm repo update
 helm install --name <kafka-minik> --namespace <kafka> -f values.yaml confluentinc/cp-helm-charts
 
 # Install flink
-
+kubectl apply -f ./flink
 
 # Install prometheus + grafana
 
