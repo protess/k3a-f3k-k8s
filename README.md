@@ -31,7 +31,7 @@ helm install --name <kafka-minik> --namespace <kafka> -f values.yaml confluentin
 아무 문제 없이 설치가 되었다면 
 
 
-# Aapche Flink
+# Apache Flink
 
 Apache Flink 에서 제공되는 Kubernetes setup guide 입니다
 https://ci.apache.org/projects/flink/flink-docs-stable/ops/deployment/kubernetes.html
@@ -40,7 +40,7 @@ Job Cluster
 하나의 잡을 실행하기 위한 구성
 
 Session Cluster
-여러개의 잡을 구성하기 위한 구성
+여러개의 잡을 실행하기 위한 구성
 
 플링크의 잡이 만약 fail 되게 되었을때 자동으로 다시시작하게 되며 checkpoint/savepoint 를 활용하여서 exactly once 및 data loss 도 방지 가능합니다
 
@@ -76,15 +76,15 @@ helm init --history-max 200
 helm repo update
 
 # Install kafka
-helm install --name <kafka-minik> --namespace <kafka> -f values.yaml confluentinc/cp-helm-charts
+helm install --name kafka-minik --namespace <kafka> -f values.yaml confluentinc/cp-helm-charts
 
 # Install flink
 kubectl apply -f ./flink
 
 # Install prometheus + grafana
 
-helm install stable/prometheus
-helm install stable/grafana
+helm install --name prometheus-minik --namespace monitoring stable/prometheus
+helm install --name grafana-minik --namespace monitoring stable/grafana
 
 # Install Minio
 helm install --name minio-minik --namespace minio --set accessKey=k8sdemo,secretKey=k8sdemo123 stable/minio
