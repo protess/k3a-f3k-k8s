@@ -1,16 +1,13 @@
 # Kafka + Flink on Kubernetes
 
-Requirements:
+__Requirements:__
 
 docker:
-https://docs.docker.com/docker-for-mac/install/
-
+https://docs.docker.com/docker-for-mac/install/  
 minikube: 
-https://kubernetes.io/docs/tasks/tools/install-minikube/
-
+https://kubernetes.io/docs/tasks/tools/install-minikube/  
 kubectl: 
-https://kubernetes.io/docs/tasks/tools/install-kubectl/
-
+https://kubernetes.io/docs/tasks/tools/install-kubectl/  
 helm: 
 https://helm.sh/docs/using_helm/#installing-helm
 
@@ -48,8 +45,7 @@ Session Cluster
 
 플링크의 잡이 만약 fail 되게 되었을때 자동으로 다시시작하게 되며 checkpoint/savepoint 를 활용하여서 exactly once 및 data loss 도 방지 가능합니다
 
-https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/checkpoints.html
-
+https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/checkpoints.html  
 https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html
 
 세션 클러스터로 구성하면 Web GUI 에서 job submit 이 가능해집니다 따라서 여러 잡을 수행하는것도 가능합니다
@@ -61,17 +57,23 @@ https://github.com/helm/charts/tree/master/stable/prometheus
 # Grafana
 https://github.com/helm/charts/tree/master/stable/grafana
 
-#Kubernetes CLI tools
-shell auto completion(쉘에서 자동완성 기능)
+kafka dashboard:  
+https://github.com/confluentinc/cp-helm-charts/blob/master/grafana-dashboard/confluent-open-source-grafana-dashboard.json
+
+flink dashboard:  
+https://grafana.com/grafana/dashboards/10369
+
+# Kubernetes CLI tools
+shell auto completion(쉘에서 자동완성 기능)  
 https://kubernetes.io/docs/tasks/tools/install-kubectl/?source=#enabling-shell-autocompletion
 
-kubectx/kubens(k8s context swith 그리고 k8s namespace 체인져)
+kubectx/kubens(k8s context swith 그리고 k8s namespace 체인져)  
 https://github.com/ahmetb/kubectx
 
-kube ps1(쉘 프롬프트를 k8s 사용하기 편하게 꾸며준다)
+kube ps1(쉘 프롬프트를 k8s 사용하기 편하게 꾸며준다)  
 https://github.com/jonmosco/kube-ps1
 
-kube aliases(alias 모음들 너무 많아서 외우기가 힘듬)
+kube aliases(alias 모음들 너무 많아서 외우기가 힘들다)  
 https://github.com/ahmetb/kubectl-aliases
 
 
