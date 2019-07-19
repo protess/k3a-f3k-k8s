@@ -105,7 +105,7 @@ https://github.com/ahmetb/kubectl-aliases
 
 ```
 # Install minikube and start
-brew cast install minikube
+brew cask install minikube
 minikube start
 
 # Install kubectl and move to usr/bin
