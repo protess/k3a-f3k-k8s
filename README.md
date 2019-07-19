@@ -125,6 +125,7 @@ cd kafka
 helm install --name kafka-minik --namespace kafka -f values.yaml confluentinc/cp-helm-charts
 
 # Install flink
+kubectl create namespace flink
 kubectl apply -f ./flink
 
 # Install prometheus + grafana
