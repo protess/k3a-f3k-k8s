@@ -119,6 +119,9 @@ helm init --history-max 200
 helm repo update
 
 # Install kafka
+helm repo add confluentinc https://confluentinc.github.io/cp-helm-charts/
+helm repo update
+cd kafka
 helm install --name kafka-minik --namespace kafka -f values.yaml confluentinc/cp-helm-charts
 
 # Install flink
