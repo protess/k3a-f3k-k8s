@@ -9,7 +9,7 @@ https://kubernetes.io/docs/tasks/tools/install-minikube/
 kubectl: 
 https://kubernetes.io/docs/tasks/tools/install-kubectl/  
 helm: 
-https://helm.sh/docs/using_helm/#installing-helm
+https://helm.sh/docs/using_helm/#installing-helm  
 virtual box:  
 https://www.virtualbox.org/wiki/Downloads
 
