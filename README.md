@@ -47,6 +47,8 @@ https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints
 
 세션 클러스터로 구성하면 Web GUI 에서 job submit 이 가능해집니다 따라서 여러 잡을 수행하는것도 가능합니다.
 
+Flink web GUI:  
+
     kubectl port-forward ${flink-jobmanager-pod-name} 8081 -n flink
 
 # Prometheus
@@ -73,9 +75,17 @@ https://github.com/confluentinc/cp-helm-charts/blob/master/grafana-dashboard/con
 Flink dashboard:  
 https://grafana.com/grafana/dashboards/10369
 
-Grafana dashboard web:  
+Grafana web dashboard:  
 
     kubectl port-forward ${grafana-pod-name} 3000 -n monitoring
+
+# Kubernetes Web UI(Dashboard)
+Kubernetes 웹 대쉬보드:  
+https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+
+minikube 에서 실행:  
+
+    minikube dashboard
 
 # Kubernetes CLI tools
 shell auto completion(쉘에서 자동완성 기능)  
