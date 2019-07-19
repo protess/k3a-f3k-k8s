@@ -13,6 +13,16 @@ https://helm.sh/docs/using_helm/#installing-helm
 Install virtual box:  
 https://www.virtualbox.org/wiki/Downloads
 
+# Minikube setting
+
+    cd ~/.minikube/config
+
+    echo {
+        "cpus": 4,
+        "dashboard": true,
+        "memory": 8196
+    } > config.json
+
 # Apache Kafka / Confluent
 
 Confluent 에서 Kafka helm chart 를 제공합니다.  
