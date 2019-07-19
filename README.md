@@ -2,15 +2,15 @@
 
 __Requirements:__
 
-docker:
+Install docker:  
 https://docs.docker.com/docker-for-mac/install/  
-minikube: 
+Install minikube:  
 https://kubernetes.io/docs/tasks/tools/install-minikube/  
-kubectl: 
+Install kubectl:  
 https://kubernetes.io/docs/tasks/tools/install-kubectl/  
-helm: 
+Install helm:  
 https://helm.sh/docs/using_helm/#installing-helm  
-virtual box:  
+Install virtual box:  
 https://www.virtualbox.org/wiki/Downloads
 
 # Apache Kafka / Confluent
