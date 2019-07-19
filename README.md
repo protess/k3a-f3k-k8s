@@ -105,6 +105,9 @@ https://github.com/ahmetb/kubectl-aliases
 # Cheat sheet
 
 ```
+# Install virtual box with brew
+brew cask install virtualbox
+
 # Install minikube and start
 brew cask install minikube
 minikube start
