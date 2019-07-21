@@ -132,6 +132,12 @@ brew install kubernetes-helm
 helm init --history-max 200
 helm repo update
 
+# Create all namespaces in k8s
+kubectl create namespace kafka
+kubectl create namespace flink
+kubectl create namespace monitoring
+kubectl create namespace minio
+
 # Install kafka
 helm repo add confluentinc https://confluentinc.github.io/cp-helm-charts/
 helm repo update
@@ -139,17 +145,16 @@ cd kafka
 helm install --name kafka-minik --namespace kafka -f values.yaml confluentinc/cp-helm-charts
 
 # Install flink
-kubectl create namespace flink
 kubectl apply -f ./flink
 
 # Install prometheus + grafana
 helm install --name prometheus-minik --namespace monitoring stable/prometheus
 helm install --name grafana-minik --namespace monitoring stable/grafana
 
-# Install Minio
+# Install Minio(s3 alternative)
 helm install --name minio-minik --namespace minio --set accessKey=k8sdemo,secretKey=k8sdemo123 stable/minio
 
-# Connect to kafka container
+# Connect to kafka broker container
 kubectl exec -n kafka -it kafka-minik-cp-kafka-0 --container cp-kafka-broker bash
 
 # Kafka commands
